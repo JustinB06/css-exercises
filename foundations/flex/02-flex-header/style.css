@@ -1,6 +1,34 @@
-.header  {
+.header {
   font-family: monospace;
   background: papayawhip;
+
+  /*J*/
+  /*Turn the entire header bar into a flex 
+  container.*/
+  display: flex;
+
+  /*Put space between the 3 divs*/
+  justify-content: space-around;
+}
+
+/*J*/
+.left-links,
+.right-links {
+  /*Don't think this is necessary for left-links and
+  right-links. The outer ul needs to be a flex
+  container.*/
+  /*Turn the 3 div sections into their own flex
+  containers.*/
+  /*display: flex;*/
+
+  /*Allow the left-links and right-links
+  divs to grow in size*/
+  flex: 1 1 0;
+
+  /*Turn the left-links and right-links div into
+  flex containers. This is necessary to allow
+  the ul children to grow in size.*/
+  display: flex;
 }
 
 .logo {
@@ -9,11 +37,57 @@
   color: tomato;
   background: white;
   padding: 4px 32px;
+
+  /*J*/
+  /*Center the "LOGO" text*/
+  text-align: center;
+
+  /*Add a margin to the div. This allows the
+  background color of the header to come through
+  behind it somehow?*/
+  margin: 15px;
 }
 
 ul {
   /* this removes the dots on the list items*/
   list-style-type: none;
+
+  /*J*/
+  /*Turn the list into a flex container*/
+  display: flex;
+
+  /*Remove [inbuilt I believe] padding and margins*/
+  padding: 0;
+  margin: 0;
+
+  /*Allow list flex containers to grow*/
+  flex: auto;
+}
+
+/*J*/
+.left-links ul {
+  /*Align the list items to the starting left*/
+  justify-content: start;
+
+  /*Create space between list items*/
+  gap: 5%;
+  padding-left: 5%;
+
+  /*Align the list items vetically*/
+  align-items: center;
+}
+
+/*J*/
+.right-links ul {
+  /*Align the list items to the starting left*/
+  justify-content: end;
+
+  /*Create space between list items*/
+  gap: 5%;
+  padding-right: 5%;
+
+  /*Align the list items vetically*/
+  align-items: center;
 }
 
 a {
